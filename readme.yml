@@ -1,0 +1,145 @@
+readme:
+  name: Buto-Plugin-ChartJpgraph_4_4_2
+  description: |
+    - Create chart images files.
+    - Render chart images visa request.
+  item:
+    -
+      name: Settings
+    -
+      name: Usage
+    -
+      name: Pages
+      item: {  }
+    -
+      name: Widgets
+      item: {  }
+    -
+      name: Event
+      item: {  }
+    -
+      name: Construct
+      item:
+        -
+          name: __construct
+    -
+      name: Methods
+      item:
+        -
+          name: get_graph
+          description: |
+            Run method to render image or create.
+            ````
+            wfPlugin::includeonce('chart/jpgraph_4_4_2');
+            $jpgraph = new PluginChartJpgraph_4_4_2();
+            $data = new PluginWfYml(__DIR__.'/graphs/line.yml');
+            $jpgraph->get_graph($data->get());    
+            ````
+          item:
+            -
+              name: Line
+              description: |
+                ````
+                type: line
+                title: 'Filled Y-grid'
+                aWidth: 700
+                aHeight: 250
+                aCachedName: auto
+                Scale: textlin
+                TickLabels:
+                  - A
+                  - B
+                  - C
+                  - D
+                  - E
+                item:
+                  -
+                    data:
+                      - 20
+                      - 15
+                      - 23
+                      - 15
+                      - 50
+                    Color: '#6495ED'
+                    #FillColor: '#cc1111'
+                    Legend: 'Line 1'
+                  -
+                    data:
+                      - 12
+                      - 9
+                      - 42
+                      - 8
+                      - 55
+                    Color: '#B22222'
+                    Legend: 'Line 2'
+                  -
+                    data:
+                      - 5
+                      - 17
+                      - 32
+                      - 24
+                      - 60
+                    Color: '#FF1493'
+                    Legend: 'Line 3'
+                Margin:
+                  - 40
+                  - 20
+                  - 36
+                  - 63
+                ````
+            -
+              name: Bar
+              description: |
+                ````
+                type: bar
+                _FileName: /plugin/chart/jpgraph_demo/MY_BAR.png
+                title: 'Bar Plots'
+                aWidth: 800
+                aHeight: 400
+                aCachedName: auto
+                Scale: textlin
+                TickPositions:
+                  aMajPos:
+                    - 0
+                    - 30
+                    - 60
+                    - 90
+                    - 120
+                    - 150
+                  aMinPos:
+                    - 15
+                    - 45
+                    - 75
+                    - 105
+                    - 135
+                TickLabels:
+                  - A
+                  - B
+                  - C
+                  - D
+                item:
+                  -
+                    data:
+                      - 47
+                      - 80
+                      - 40
+                      - 116
+                    Color: '#6495ED'
+                    FillColor: '#cc1111'
+                  -
+                    data:
+                      - 61
+                      - 30
+                      - 82
+                      - 105
+                    Color: '#6495ED'
+                    FillColor: '#11cccc'
+                  -
+                    data:
+                      - 115
+                      - 50
+                      - 70
+                      - 93
+                    Color: '#6495ED'
+                    FillColor: '#1111cc'
+                ````
