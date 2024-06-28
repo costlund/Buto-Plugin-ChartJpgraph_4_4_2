@@ -1,6 +1,9 @@
 # Buto-Plugin-ChartJpgraph_4_4_2
 
-
+<ul>
+<li>Create chart images files.</li>
+<li>Render chart images visa request.</li>
+</ul>
 
 <a name="key_0"></a>
 
@@ -108,8 +111,7 @@ Margin:
   - 40
   - 20
   - 36
-  - 63
-</code></pre>
+  - 63</code></pre>
 
 <a name="key_6_0_1"></a>
 
